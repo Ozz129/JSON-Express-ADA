@@ -7,11 +7,7 @@ const express = require('express');
 const app = express();
 
 //utilizamos json de express como un middleware
-app.use(express.json({
-  limit: 10,
-  reviver: '',
-  strict: true
-}));
+app.use(express.json());
 
 app.post('/usuarios', (req, res) => {
   const nuevoUsuario = req.body;
